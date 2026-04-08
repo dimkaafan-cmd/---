@@ -1,0 +1,118 @@
+script: "/main/game_ui.gui_script"
+fonts {
+  name: "font"
+  font: "/assets/fonts/font.font"
+}
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+nodes {
+  position {
+    x: 332.0
+    y: 140.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+    z: 2.0
+  }
+  size {
+    x: 125.0
+    y: 46.0
+    z: 72.0
+  }
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "WIN "
+  font: "font"
+  id: "result_label"
+  inherit_alpha: true
+  material: "font"
+}
+nodes {
+  position {
+    x: 332.0
+    y: 84.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+    z: 2.0
+  }
+  size {
+    x: 80.0
+    y: 54.0
+  }
+  color {
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "REWARD: "
+  font: "default"
+  id: "loot_label"
+  inherit_alpha: true
+  material: "font-df"
+}
+nodes {
+  position {
+    x: 320.0
+    y: 275.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "restart_button"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  enabled: false
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "restart"
+  font: "default"
+  id: "text"
+  parent: "restart_button"
+  inherit_alpha: true
+  material: "font-df"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
+materials {
+  name: "font-df"
+  material: "/builtins/fonts/font-df.material"
+}
+materials {
+  name: "font"
+  material: "/builtins/fonts/font.material"
+}
+materials {
+  name: "label"
+  material: "/builtins/fonts/label.material"
+}
+materials {
+  name: "gui"
+  material: "/builtins/materials/gui.material"
+}
+materials {
+  name: "gui_paged_atlas"
+  material: "/builtins/materials/gui_paged_atlas.material"
+}

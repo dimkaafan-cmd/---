@@ -1,0 +1,89 @@
+name: "main"
+instances {
+  id: "cell_0"
+  prototype: "/assets/cell.go"
+  position {
+    x: 266.0
+    y: 255.0
+  }
+}
+instances {
+  id: "cell_1"
+  prototype: "/assets/cell.go"
+  position {
+    x: 332.0
+    y: 255.0
+  }
+}
+instances {
+  id: "cell_8"
+  prototype: "/assets/cell.go"
+  position {
+    x: 399.0
+    y: 381.0
+  }
+}
+instances {
+  id: "cell_2"
+  prototype: "/assets/cell.go"
+  position {
+    x: 400.0
+    y: 255.0
+  }
+}
+instances {
+  id: "cell_3"
+  prototype: "/assets/cell.go"
+  position {
+    x: 266.0
+    y: 318.0
+  }
+}
+instances {
+  id: "cell_4"
+  prototype: "/assets/cell.go"
+  position {
+    x: 332.0
+    y: 318.0
+  }
+}
+instances {
+  id: "cell_5"
+  prototype: "/assets/cell.go"
+  position {
+    x: 399.0
+    y: 318.0
+  }
+}
+instances {
+  id: "cell_6"
+  prototype: "/assets/cell.go"
+  position {
+    x: 267.0
+    y: 382.0
+  }
+}
+instances {
+  id: "cell_7"
+  prototype: "/assets/cell.go"
+  position {
+    x: 332.0
+    y: 382.0
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"controller\"\n"
+  "  component: \"/main/controller.script\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"game_ui\"\n"
+  "  component: \"/main/game_ui.gui\"\n"
+  "}\n"
+  ""
+  position {
+    y: -2.0
+  }
+}

@@ -1,0 +1,38 @@
+function init(self)
+	-- Скрываем интерфейс при старте
+	gui.set_enabled(gui.get_node("result_label"), false)
+	gui.set_enabled(gui.get_node("loot_label"), false)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("show_win") then
+		gui.set_enabled(gui.get_node("restart_button"), true)
+		-- Показываем текст и подставляем данные
+		local res = gui.get_node("result_label")
+		local loot = gui.get_node("loot_label")
+
+		gui.set_enabled(res, true)
+		gui.set_enabled(loot, true)
+
+		gui.set_text(res, message.title)
+		gui.set_text(loot, "REWARD: " .. message.reward)
+	end
+	if message_id == hash("hide_ui") then
+		local res = gui.get_node("result_label")
+		local loot = gui.get_node("loot_label")
+
+		gui.set_enabled(res, false)
+		gui.set_enabled(loot, false)
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.pressed then
+		local btn = gui.get_node("restart_button")
+		-- Проверяем, кликнул ли пользователь именно в границы кнопки
+		if gui.pick_node(btn, action.x, action.y) and gui.is_enabled(btn) then
+			gui.set_enabled(btn, false) -- Скрываем кнопку
+			msg.post("#controller", "restart_game") -- Шлем сигнал в контроллер
+		end
+	end
+end

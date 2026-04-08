@@ -1,0 +1,10 @@
+images {
+  image: "/assets/images/cross.png"
+}
+images {
+  image: "/assets/images/empty.png"
+}
+images {
+  image: "/assets/images/nought.png"
+}
+extrude_borders: 2
